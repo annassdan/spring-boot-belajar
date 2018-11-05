@@ -4,6 +4,7 @@ package com.kecil.services;
 import com.kecil.entities.Siswa;
 import com.kecil.repositories.SiswaRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -17,9 +18,9 @@ public class SiswaService  {
     SiswaRepo siswaRepo;
 
 
-    public List<Siswa> getAllData(int page, int size) {
+    public Page<Siswa> getAllData(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return siswaRepo.findAll(pageable).getContent();
+        return siswaRepo.findAll(pageable);
     }
 
     public Siswa saveData(Siswa siswa) {
