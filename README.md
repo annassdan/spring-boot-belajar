@@ -11,8 +11,6 @@ Belajar Spring Boot
 
 ### Database
 * [PostgreSQL](https://www.postgresql.org/)
-### Other Library
-* [Swagger](https://swagger.io/) for Documenting Rest API
 ### Tools
 * [Maven](https://maven.apache.org/) for library management & Build Tools
 ### Web Container
